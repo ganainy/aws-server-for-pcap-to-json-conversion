@@ -467,38 +467,4 @@ A simple Android app (Kotlin Compose) was built to demonstrate the use of this s
     *   `curl -X POST -i -F "pcap_file=@/path/to/test.pcap" https://yourdomain.com/upload`
     *   `curl -i https://yourdomain.com/status/JOB_ID`
     *   `curl -o test_final.json https://pcap-results.yourdomain.com/results/JOB_ID.json`
-3.  **Android App:** Ensure the app uses the correct HTTPS URLs (for API calls and downloads) and test the full workflow. Remove any cleartext traffic configurations from the app's manifest and network security config file.
-
----
-
-## Required Files for GitHub Repository
-
-Based on this setup, the essential files to include in a Git repository would be:
-
-1.  **`~/pcap_node_processor/server.js`**: The core Node.js application code.
-2.  **`~/pcap_node_processor/package.json`**: Defines Node dependencies.
-3.  **`~/pcap_node_processor/package-lock.json`**: Locks dependency versions.
-4.  **`.gitignore`**: To exclude `node_modules`, `uploads`, potentially logs, etc.
-    ```gitignore
-    # Node
-    node_modules/
-    npm-debug.log*
-    yarn-debug.log*
-    yarn-error.log*
-
-    # Server Files (Generated/Uploaded)
-    uploads/
-    # Optional: Exclude results if you don't want generated JSON in repo
-    # results/
-
-    # Logs
-    *.log
-
-    # Environment Variables (if any)
-    .env
-
-    # OS generated files
-    .DS_Store
-    Thumbs.db
-    ```
 

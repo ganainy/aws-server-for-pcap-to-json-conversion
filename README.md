@@ -501,7 +501,4 @@ Based on this setup, the essential files to include in a Git repository would be
     .DS_Store
     Thumbs.db
     ```
-5.  **`README.md`**: This setup guide itself (or a modified version).
-6.  **Example Apache Configuration Files (Optional but helpful):** Include anonymized copies of your working Apache `.conf` files (e.g., `example-apache-configs/your-api-domain.conf`, `example-apache-configs/pcap-results.yourdomain.com.conf`) as *examples*, indicating where users need to customize paths, domains, etc. **Do NOT commit your actual certificate files (`.pem`)**.
 
-The user setting up the server would clone the repository, run `npm install` inside `~/pcap_node_processor`, and then follow the server setup steps in the README (installing prerequisites, configuring Apache, obtaining certificates, setting up pm2).
